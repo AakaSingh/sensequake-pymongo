@@ -1,5 +1,4 @@
-from services.cities_and_roads import get_cities_without_string
-from services.cities_and_roads import get_roads
+from services.cities_and_roads import *
 
 cities_without_hello = get_cities_without_string("hello")
 
@@ -8,3 +7,6 @@ cities_without_hello = get_cities_without_string("hello")
 #   print(city["name"])
 
 get_roads()
+
+print(get_no_of_islands())
+
