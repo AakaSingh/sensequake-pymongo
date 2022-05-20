@@ -1,0 +1,1 @@
+"C:\Program Files\MongoDB\Server\5.0\bin\mongod.exe" --dbpath "C:\Users\ADMIN\OneDrive\Desktop\applicant_test\database" --port 9999 --nojournal

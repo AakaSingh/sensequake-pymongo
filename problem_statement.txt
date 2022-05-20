@@ -1,0 +1,26 @@
+Before starting:
+You will need to install the latest version of Mongo (https://www.mongodb.com/try/download/community).
+You will also need Python with pymongo installed (e.g. "py -m pip install pymongo" on Windows).
+Feel free to use any documentation you want.
+
+Instructions:
+You need to write a Python script which interacts with a database and computes some things.
+First you need to start an already-populated database which is provided to you in the "database" folder;
+e.g. from a new console: "mongod --dbpath ./database --port 9999  --nojournal" (assuming mongod is added to your PATH and you want to start it on port 9999), or on Windows click on "start_database.py" (modify the content of the file with the location of mongod.exe on your machine)
+Make sure you have the latest version of Mongo (like 5.0), or else the database may not start.
+The "database" folder contains a mongo database called "local", which contains two collections: "cities" and "roads".
+The "cities" collection documents have the following fields (other than "_id"):
+    "name": a String (the name of the city)
+The "roads" collection documents have the following fields:
+    "endpoints": a 2-elements array of ObjectId (the _ids of 2 cities connected by the road)
+    "length": a Double (the length of the road)
+a) Write a mongo query that finds all cities in the database that do not have the name "hello".
+b) Write a mongo query that finds all roads in the database that have a length greater than zero and connect two of the cities found in a) (i.e. exclude roads that connect to any city not found previously).
+c) Consider that every "island" contains at least one city, and that if it is possible to travel between two cities by roads if and only if the cities are on the same island.
+   Write a function that, given the cities and roads, counts the number of islands.
+d) We want to connect directly or indirectly all the cities on each island with electrical power lines. Power lines can only be placed along roads, so a power line segment connecting 2 cities will have a length matching that of the road.
+   Write a function that, given cities and roads, finds the shortest total length of power lines needed to connect the cities. Note that if two cities are on different islands, they do not need to be connected.
+Try to answer as many of these questions as possible, even if you are not sure of the answer. If you think the question is not clear enough, make some assumptions and state what they are in comments.
+
+After you are done:
+Send us either your main.py file alone or a link to a public repo (e.g. Github) containing your code.
